@@ -39,8 +39,8 @@ namespace Program
             }
 
             int SourcePalindromesListCount = Palindromes.Count;
-            for (int i = SourcePalindromesListCount - 1; i >= 0; i--)//use reverse cycle, 
-                                                                     //because we need walkthrough all elements of list, and we must be able to del elements in cycle body
+            for (int i = SourcePalindromesListCount - 1; i >= 0; i--)//we must use reverse cycle, 
+                                                                     //because we need walkthrough all elements of list, and we must be able to del elements in body of cycle
             {
                 if (Palindromes[i].Length < MaxLengthOfPalindrome)
                     Palindromes.Remove(Palindromes[i]);
