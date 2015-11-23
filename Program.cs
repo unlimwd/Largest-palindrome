@@ -58,13 +58,13 @@ namespace Program
             Console.ReadLine();
         }
 
-        static bool IsSubstringPalindrome(string Str)//if Str is not palindtome function must returns false
+        static bool IsSubstringPalindrome(string Str)//function checks  is Str substring a palindrome. If it isn't palindtome function must returns false, else true.
         {
             for (int i = 0; i <= Str.Length - 1; i++)
             {
                 if (Str[i] != Str[Str.Length - 1 - i]) return false;
                 if ((i == Str.Length - 1 - i) || //if we reached middle of string with odd quantity of elements
-                    (i + 1 == Str.Length - 1 - i)) //if we reached middle of string with odd quantity of elements
+                    (i + 1 == Str.Length - 1 - i)) //if we reached middle of string with even quantity of elements
                 {
                     i = Str.Length;  //go out from cycle
                 }
